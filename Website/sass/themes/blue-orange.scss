@@ -1,0 +1,466 @@
+@import "../variables";
+
+/*=====Color Styles By Section=====*/
+
+$primary: #0084ff;
+$secondary: #ff6622;
+
+/*===== GLOBAL =====*/
+
+a {
+    color: $primary;
+    &:hover,
+    &:focus {
+        color: darken($primary, 30%);
+    }
+}
+
+.btn-primary {
+    background: $primary;
+}
+
+.btn-warning {
+    background: $secondary;
+}
+
+.btn-block {
+    background: $primary;
+}
+
+
+/*=====Header=====*/
+
+header.row {
+    .navbar {
+        background: $white;
+        .navbar-header {
+            .navbar-toggle {
+                background: none;
+                border: none;
+                span {
+                    background: $baseColor;
+                }
+                &[aria-expanded="true"] {
+                    span {
+                        background: lighten(#374048, 28);
+                    }
+                }
+            }
+            .navbar-brand {
+                a {
+                    img {}
+                }
+            }
+        }
+        &.is-scrolling {
+            background: $white;
+            -webkit-box-shadow: 0 2px 42px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 42px rgba(0, 0, 0, 0.1);
+            .nav li {
+                a {
+                    color: #8f969d;
+                }
+                &.active a {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+header.alt-bg .navbar-default .nav > li > a {
+    color: #fff;
+}
+
+header.alt-bg .navbar .navbar-header .navbar-toggle span {
+    background: $white;
+}
+
+header.alt-bg .navbar.is-scrolling .navbar-header .navbar-toggle span {
+    background: $baseColor;
+}
+
+.navbar-default {
+    .nav {
+        li {
+            a {
+                color: #8f969d;
+                &:hover,
+                &:focus {
+                    color: $baseColor;
+                    background: none;
+                }
+            }
+            &.active {
+                a {
+                    background: none;
+                    color: $secondary;
+                }
+            }
+        }
+    }
+    .navbar-nav > .open > {
+        a,
+        a:hover,
+        a:focus {
+            background-color: transparent;
+            color: $secondary;
+        }
+    }
+}
+
+.navbar-default .navbar-nav>.active>a {
+    &,
+    &:hover,
+    &:focus {
+        color: $secondary;
+    }
+}
+
+.top-banner {
+    h2 {
+        color: $baseColor;
+    }
+    p {
+        color: #8a9095;
+    }
+    .apple-watch {
+        img {}
+    }
+}
+
+body.home {
+    header {
+        .navbar {
+            background: transparent;
+        }
+    }
+}
+
+
+/*=====Section Header=====*/
+
+.section-header {
+    &:after {
+        background: #eee;
+    }
+    h2 {
+        color: $baseColor;
+    }
+    p {
+        color: #969da3;
+    }
+    &.v2 {
+        &:after {
+            background: #f6f8fa;
+        }
+        p {
+            color: #4e575f;
+        }
+    }
+}
+
+
+/*=====How it Works=====*/
+
+.how-it-works {
+    background: $lightGray;
+    .work-processes {}
+}
+
+.work-process {
+    .process-icon {}
+    h3 {
+        color: $baseColor;
+    }
+    p {
+        color: #737c85;
+    }
+}
+
+
+
+
+
+
+/*=====Our Collection=====*/
+
+.our-collection {}
+
+.collections {
+    .item {
+        .featured-img {
+            img {}
+        }
+        .title {
+            color: $primary;
+        }
+        .category {
+            color: #b4bcc3;
+        }
+        .price {
+            color: $secondary;
+        }
+    }
+}
+
+
+/*=====The Watch=====*/
+
+.the-watch {
+    background: $lightGray;
+}
+
+.the-watch-features {
+    ul {
+        li {
+            color: #696f74;
+        }
+    }
+}
+
+
+/*=====Split Columns=====*/
+
+.split-columns {}
+
+.split-column {
+    .image {}
+    .texts {
+        h2 {
+            color: $baseColor;
+        }
+        p {
+            color: $lightBluish;
+        }
+    }
+}
+
+
+
+
+/*=====FAQ=====*/
+
+.faqs {}
+
+.faq {
+    h4 {
+        color: $baseColor;
+    }
+    p {
+        color: $darkGray;
+    }
+}
+
+
+
+
+/*=====Timeline=====*/
+
+.timeline {
+    .section-header {}
+    .timeline-row {
+        &:before {
+            background: #dee0e2;
+        }
+    }
+}
+
+.timeline-post {
+    .bar-content {
+        .inner {
+            color: #bfc2c5;
+            background: #dee0e2;
+        }
+    }
+    .half-side {
+        &:before {
+            border-color: #dee0e2;
+            background: $white;
+        }
+        h4 {
+            color: #6a737b;
+        }
+        p {
+            color: #b7bbbf;
+        }
+        &.date {
+            color: #dadce0;
+        }
+        &.content {
+            .inner {
+                background: #f5f8fa;
+            }
+        }
+        & + .half-side {
+            &:before {
+                border-color: #dee0e2;
+                background: $white;
+            }
+        }
+    }
+    & + .timeline-post {}
+    &.has-content {
+        &.odd {
+            .half-side {
+                &.date {}
+                &.content {
+                    .inner {}
+                }
+                &:before {}
+                & + .half-side {
+                    &:before {
+                        @media (max-width: 767px) {
+                            border-color: #dee0e2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/*=====Contact=====*/
+
+.contact {
+    #mapBox {}
+}
+
+.flip-box-container {
+    .flip-box {}
+}
+
+.contact-box {
+    background: $white;
+    h2 {
+        color: $baseColor;
+    }
+    ul {
+        li {
+            color: #a5aeb3;
+            i {}
+        }
+    }
+}
+
+.contact-form {
+    background: $white;
+}
+
+
+/*=====Footer=====*/
+
+footer.row {
+    background: $lightGray;
+    .menu-rights {
+        p {
+            color: #c3cbd1;
+        }
+    }
+}
+
+.footer-menu {
+    li {
+        color: lighten($primary, 30%);
+        a {
+            color: lighten($primary, 30%);
+            &:hover,
+            &:focus {
+                background: none;
+                color: $baseColor;
+            }
+        }
+    }
+}
+
+.social-links {
+    border-bottom-color: #e9eef2;
+    ul {
+        li {
+            a {
+                background: lighten($primary, 30%);
+                color: $white;
+                &:hover,
+                &:focus {
+                    background: $baseColor;
+                }
+            }
+        }
+    }
+}
+
+
+/*=====Page Header=====*/
+
+.page-header {
+    background: #e9eaec;
+    h2 {
+        color: $baseColor;
+    }
+    h4 {
+        color: #828588;
+    }
+}
+
+
+
+/*=====Video======*/
+
+.video-row {}
+
+.watch-review {
+    & + button.mfp-close {
+        background: $white;
+        color: #333;
+        &:hover {
+            color: $black;
+        }
+    }
+}
+
+.pagination {
+    li {
+        a {
+            background: #f7f7f7;
+            color: #999;
+            &:hover,
+            &:focus {
+                color: $white;
+                background: #2979ff;
+            }
+        }
+        &.active {
+            a {
+                color: $white;
+                background: #2979ff;
+                &:hover,
+                &:focus {
+                    background: $baseColor;
+                }
+            }
+        }
+    }
+}
+
+
+/*  =========== NAV TABS =========== */
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
+    background-color: $primary;
+}
+
+
+/*  =========== UTILITIES =========== */
+
+.help-block {
+    &.text-danger {
+        color: #FF5B58;
+    }
+    &.text-success {
+        color: #53CC2E;
+    }
+}
